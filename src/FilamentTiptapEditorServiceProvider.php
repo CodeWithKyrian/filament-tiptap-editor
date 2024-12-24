@@ -38,7 +38,7 @@ class FilamentTiptapEditorServiceProvider extends PackageServiceProvider
         ];
 
         if (config('filament-tiptap-editor.extensions_script')) {
-            $assets[] = Js::make('tiptap-custom-extension-scripts', Vite::asset(config('filament-tiptap-editor.extensions_script')));
+            $assets[] = Js::make('tiptap-custom-extension-scripts', Vite::asset(config('filament-tiptap-editor.extensions_script')))->module();
         }
 
         if (config('filament-tiptap-editor.extensions_styles')) {
